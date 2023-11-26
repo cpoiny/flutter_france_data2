@@ -18,8 +18,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const ListView( // agencement des sections du body en colonne
-        children: <Widget>[ // sections du body
+      body: ListView( // agencement des sections du body en colonne
+        children: const <Widget>[ // sections du body
           //... ici empilez les differentes sections du body.
           //... séparez les avec du padding
           VideoHero(), // component affichant un Hero avec un background Video
