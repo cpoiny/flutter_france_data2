@@ -17,27 +17,14 @@ class HomePage extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              // do something
-            },
-          )
-        ],
       ),
-      body: Container( // container principal de tout le body
-        child: const Column( // agencement des sections du body en colonne
-          children: <Widget>[ // sections du body
-            //... ici empilez les differentes sections du body.
-            //... séparez les avec du padding
-            VideoHero(), // component affichant un Hero avec un background Video
+      body: const Column( // agencement des sections du body en colonne
+        children: <Widget>[ // sections du body
+          //... ici empilez les differentes sections du body.
+          //... séparez les avec du padding
+          VideoHero(), // component affichant un Hero avec un background Video
 
-          ],
-        ),
+        ],
       ),
     );
   }
