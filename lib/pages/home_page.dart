@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column( // agencement des sections du body en colonne
+      body: const ListView( // agencement des sections du body en colonne
         children: <Widget>[ // sections du body
           //... ici empilez les differentes sections du body.
           //... séparez les avec du padding
