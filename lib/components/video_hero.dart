@@ -6,6 +6,7 @@ import 'package:video_player/video_player.dart';
 class VideoHero extends StatefulWidget {
   const VideoHero({super.key});
 
+
   @override
   State<VideoHero> createState() => _VideoHeroState();
 }
@@ -48,12 +49,27 @@ class _VideoHeroState extends State<VideoHero> {
          mainAxisAlignment: MainAxisAlignment.
            spaceEvenly,
         children: [
-          AspectRatio(
+             const Text(
+           "France Data",
+           style:  TextStyle(
+             color: Colors.white,
+             fontFamily: 'Courier new',
+             fontSize: 35,
+           ),
+         ),
+              const Text(
+           "Atlas des données de France",
+           style:  TextStyle(
+             color: Colors.white,
+             fontFamily: 'Courier new',
+             fontSize: 15,
+           ),
+         ),
+         AspectRatio(
                aspectRatio: _controller.value.aspectRatio,
                // Use the VideoPlayer widget to display the video.
                child: VideoPlayer(_controller),
              ),
-             const Text('test'),
         ],
       ),
     
