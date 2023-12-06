@@ -28,7 +28,6 @@ class _VideoHeroState extends State<VideoHero> {
 
   @override
   Widget build(BuildContext context) {
-    // Complete the code in the next step.
     return Container(
       decoration: const BoxDecoration(
         color: Colors.red,
@@ -38,14 +37,16 @@ class _VideoHeroState extends State<VideoHero> {
         children: [
           AspectRatio(
             aspectRatio: 16 / 9,
-            // Use the VideoPlayer widget to display the video.
             child: Stack(
               children: <Widget>[
                 VideoPlayer(_controller),
                 const Positioned(
                   child: Align(
                     alignment: Alignment.center,
-                    child: Text(
+                    child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Text(
                       "France Data",
                       style: TextStyle(
                         color: Colors.white,
@@ -53,19 +54,15 @@ class _VideoHeroState extends State<VideoHero> {
                         fontSize: 35,
                       ),
                     ),
-                  ),
-                ),
-                const Positioned(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Atlas des donnés de France",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Courier new',
-                        fontSize: 15,
-                      ),
-                    ),
+                    Text(
+                       "Atlas des donnés de France",
+                       style: TextStyle(
+                         color: Colors.white,
+                         fontFamily: 'Courier new',
+                         fontSize: 15,
+                       ),
+                     ),
+                    ],),
                   ),
                 ),
               ],
