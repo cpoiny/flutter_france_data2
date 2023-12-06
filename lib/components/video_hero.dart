@@ -1,20 +1,19 @@
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+
 
 class VideoHero extends StatefulWidget {
   const VideoHero({super.key});
 
-
- @override
-  _VideoHeroState createState() => _VideoHeroState();
+  @override
+  State<VideoHero> createState() => _VideoHeroState();
 }
-
 
 class _VideoHeroState extends State<VideoHero> {
 
-  
+  late VideoPlayerController _controller;
 
- late VideoPlayerController _controller;
    @override
   void initState() {
     super.initState();
@@ -30,53 +29,34 @@ class _VideoHeroState extends State<VideoHero> {
       });
   }
 
+  @override
+  void dispose() {
+    // Ensure disposing of the VideoPlayerController to free up resources.
+    _controller.dispose();
 
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-      return Container(
-       decoration: const BoxDecoration(
+    // Complete the code in the next step.
+    return Container(
+      decoration: const BoxDecoration(
          color: Colors.red,
        ),
-       // -------------------------- votre code ci dessous----------------
-       child:  Column(
+      child : Column(
          mainAxisAlignment: MainAxisAlignment.
            spaceEvenly,
-           children: <Widget>[
-      
-            VideoPlayer(_controller),
-                  
-            const Column(
-              children: <Widget>[
-                Text(
-           "France Data",
-           style:  TextStyle(
-             color: Colors.white,
-             fontFamily: 'Courier new',
-             fontSize: 35,
-           ),
-         ),
-                Text(
-           "Atlas des données de France",
-           style:  TextStyle(
-             color: Colors.white,
-             fontFamily: 'Courier new',
-             fontSize: 15,
-           ),
-         ),
-        ]  
+        children: [
+          AspectRatio(
+               aspectRatio: _controller.value.aspectRatio,
+               // Use the VideoPlayer widget to display the video.
+               child: VideoPlayer(_controller),
+             ),
+             const Text('test'),
+        ],
       ),
-    ]
-  ),
-);
-}
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
+    
+    );
   }
 }
-
-
-
