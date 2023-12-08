@@ -40,41 +40,43 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 280),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 227, 230, 236),
-            ),
+            decoration: BoxDecoration(border:Border.all(
+              color: Colors.cyanAccent,
+            )),
+            padding: const EdgeInsets.fromLTRB(10, 10, 10, 200),
             child: const Column(
+             // mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-             Text(
-              "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-              style: TextStyle(
+                Text(
+                "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                style: TextStyle(
                 color: Colors.black,
                 fontSize: 12,
               ),
             ),
-            SearchBar(
-              constraints:BoxConstraints(minWidth: 50.0, minHeight: 56.0),
-              hintText: "Rechercher par région",
-              backgroundColor:MaterialStatePropertyAll(
-                 Color.fromARGB(19, 177, 175, 175),
+                SearchBar(
+                constraints:BoxConstraints(maxWidth: 250, minHeight: 40),
+                hintText: "Rechercher par région",
+                backgroundColor:MaterialStatePropertyAll(
+                Color.fromARGB(19, 223, 219, 219),
               ) ,
-              leading: Icon(
+                leading: Icon(
                 Icons.search,
+                color: Color.fromARGB(255, 42, 75, 133),
               ),
             ),
-            Text(
-              "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-              style: TextStyle(
+                Text(
+                "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                style: TextStyle(
                 color: Color.fromARGB(255, 161, 158, 158),
                 fontSize: 8,
               ),
             ),
           ],
           ),
-      ),
+            ),
       ],
     ),
     );
