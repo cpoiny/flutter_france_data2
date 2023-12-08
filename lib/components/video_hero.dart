@@ -51,7 +51,8 @@ class _VideoHeroState extends State<VideoHero> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Courier new',
-                        fontSize: 35,
+                        fontSize: 25,
+                        letterSpacing: 4,
                       ),
                     ),
                     Text(
@@ -60,6 +61,7 @@ class _VideoHeroState extends State<VideoHero> {
                          color: Colors.white,
                          fontFamily: 'Courier new',
                          fontSize: 15,
+                        letterSpacing: 7,
                        ),
                      ),
                     ],),

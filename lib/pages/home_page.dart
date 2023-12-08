@@ -7,19 +7,24 @@ class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
   final String title;
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+   @override
+  MyTextInputState createState() =>  MyTextInputState();
 }
-  
 
+ class MyTextInputState extends State<HomePage>{
+
+    String result = "";
   @override
   Widget build(BuildContext context) {
+    const spacer = SizedBox(height: 60.0);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(
-          title,
-          style: const TextStyle(
+        // change color of icon
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Text(
+          "France Data",
+          style: TextStyle(
             color: Colors.white,
           ),
         ),
@@ -90,30 +95,23 @@ class HomePage extends StatefulWidget {
       body: ListView(
         // agencement des sections du body en colonne
         children: <Widget>[
-          // sections du body
-          //... ici empilez les differentes sections du body.
-          //... séparez les avec du padding
           const VideoHero(), // component affichant un Hero avec un background Video
           Container(
-            padding: const EdgeInsets.fromLTRB(10, 5, 5, 5),
+            padding: const EdgeInsets.fromLTRB(15, 10, 5, 10),
             decoration: const BoxDecoration(
               color: Color.fromARGB(255, 52, 104, 194),
             ),
             child: const Text(
               "I. Nos Régions",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+               //fontWeight: FontWeight.bold,
                 color: Colors.white,
                 fontSize: 18,
               ),
             ),
           ),
           Container(
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Colors.cyanAccent,
-            )),
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 200),
+            padding: const EdgeInsets.fromLTRB(15, 15, 10, 50),
             child: const Column(
               // mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -121,26 +119,31 @@ class HomePage extends StatefulWidget {
               children: [
                // SizedBox(height: 20.0),
                 Text(
-                  "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                  "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 12,
                   ),
                 ),
+                spacer,
                 SearchBar(
-                  controller: _searchController,
-                  constraints: BoxConstraints(maxWidth: 250, minHeight: 40,),
-                  hintText: "Rechercher par région",
-                  backgroundColor: MaterialStatePropertyAll(
-                    Color.fromARGB(19, 223, 219, 219),
+                constraints: BoxConstraints(maxWidth: 250, minHeight: 40,),
+                hintText: "Rechercher par région",
+                backgroundColor: MaterialStatePropertyAll(
+                    Colors.white
                   ),
-                  leading: Icon(
+                leading: Icon(
                     Icons.search,
-                    color: Color.fromARGB(255, 42, 75, 133),
+                    color: Color.fromARGB(255, 39, 108, 228),
+                    size: 18,
                   ),
+                //   onSubmitted: (String query){
+
+                // },
                 ),
+                spacer,
                 Text(
-                  "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                  "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                   style: TextStyle(
                   color: Color.fromARGB(255, 161, 158, 158),
                   fontSize: 8,
@@ -155,4 +158,3 @@ class HomePage extends StatefulWidget {
   }
 }
 
-final TextEditingController _searchController = TextEditingController();
