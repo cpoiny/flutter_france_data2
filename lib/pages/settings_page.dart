@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RegionPage extends StatelessWidget {
-  const RegionPage({super.key, required this.title});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key, required this.title});
 
   final String title;
 
@@ -12,8 +12,7 @@ class RegionPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title,
         style: const TextStyle(color: Colors.white, 
-        ),
-        ),
+        ),),
       ),
       body: Container(),
     );

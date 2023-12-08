@@ -29,9 +29,9 @@ class _VideoHeroState extends State<VideoHero> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.red,
-      ),
+      // decoration: const BoxDecoration(
+      //   color: Colors.red,
+      // ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -77,7 +77,6 @@ class _VideoHeroState extends State<VideoHero> {
   void dispose() {
     // Ensure disposing of the VideoPlayerController to free up resources.
     _controller.dispose();
-
     super.dispose();
   }
 }
