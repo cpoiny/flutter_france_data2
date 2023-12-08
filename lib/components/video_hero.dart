@@ -29,9 +29,9 @@ class _VideoHeroState extends State<VideoHero> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.red,
-      ),
+      // decoration: const BoxDecoration(
+      //   color: Colors.red,
+      // ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -51,7 +51,8 @@ class _VideoHeroState extends State<VideoHero> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Courier new',
-                        fontSize: 35,
+                        fontSize: 25,
+                        letterSpacing: 4,
                       ),
                     ),
                     Text(
@@ -60,6 +61,7 @@ class _VideoHeroState extends State<VideoHero> {
                          color: Colors.white,
                          fontFamily: 'Courier new',
                          fontSize: 15,
+                        letterSpacing: 7,
                        ),
                      ),
                     ],),
@@ -77,7 +79,6 @@ class _VideoHeroState extends State<VideoHero> {
   void dispose() {
     // Ensure disposing of the VideoPlayerController to free up resources.
     _controller.dispose();
-
     super.dispose();
   }
 }
