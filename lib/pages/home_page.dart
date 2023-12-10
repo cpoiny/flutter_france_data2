@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examen1/components/search_bar.dart';
 import 'package:flutter_examen1/components/video_hero.dart';
 import 'package:flutter_examen1/pages/regions_page.dart';
 import 'package:flutter_examen1/pages/settings_page.dart';
@@ -29,7 +30,7 @@ class HomePage extends StatefulWidget {
           ),
         ),
       ),
-      // burgerMenu
+      // le menu burger
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
@@ -104,7 +105,6 @@ class HomePage extends StatefulWidget {
             child: const Text(
               "I. Nos Régions",
               style: TextStyle(
-               //fontWeight: FontWeight.bold,
                 color: Colors.white,
                 fontSize: 18,
               ),
@@ -113,11 +113,9 @@ class HomePage extends StatefulWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(15, 15, 10, 50),
             child: const Column(
-              // mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               // SizedBox(height: 20.0),
                 Text(
                   "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                   style: TextStyle(
@@ -126,21 +124,8 @@ class HomePage extends StatefulWidget {
                   ),
                 ),
                 spacer,
-                SearchBar(
-                constraints: BoxConstraints(maxWidth: 250, minHeight: 40,),
-                hintText: "Rechercher par région",
-                backgroundColor: MaterialStatePropertyAll(
-                    Colors.white
-                  ),
-                leading: Icon(
-                    Icons.search,
-                    color: Color.fromARGB(255, 39, 108, 228),
-                    size: 18,
-                  ),
-                //   onSubmitted: (String query){
-
-                // },
-                ),
+                // Barre de recherche par région
+                SearchBarApp(),
                 spacer,
                 Text(
                   "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -157,4 +142,7 @@ class HomePage extends StatefulWidget {
     );
   }
 }
+
+
+
 
