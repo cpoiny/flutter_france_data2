@@ -36,7 +36,9 @@ class HomePage extends StatefulWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 107, 126, 123)),
+                  BoxDecoration(
+                  color: Color.fromARGB(255, 107, 126, 123), 
+                  ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -68,7 +70,7 @@ class HomePage extends StatefulWidget {
               title: const Text('Accueil', style: TextStyle(fontSize: 18)
               ),
             ),
-              ListTile(
+            ListTile(
               onTap: (){
                 Navigator.push(
                   context,
@@ -79,7 +81,7 @@ class HomePage extends StatefulWidget {
               title: const Text('Régions', style: TextStyle(fontSize: 18)
               ),
             ),
-              ListTile(
+            ListTile(
               onTap: (){
                 Navigator.push(
                   context,
@@ -110,7 +112,14 @@ class HomePage extends StatefulWidget {
               ),
             ),
           ),
-          Container(
+           Container(
+            decoration: const BoxDecoration(image: 
+            DecorationImage(
+              image: AssetImage("img/montagne.jpg"),
+              fit: BoxFit.fill,
+              opacity: 0.1
+              )
+            ),
             padding: const EdgeInsets.fromLTRB(15, 15, 10, 50),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -134,6 +143,7 @@ class HomePage extends StatefulWidget {
                   fontSize: 8,
                   ),
                 ),
+                spacer,
               ],
             ),
           ),

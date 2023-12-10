@@ -10,7 +10,7 @@ class SearchBarApp extends StatefulWidget {
 
 
 class _SearchBarAppState extends State<SearchBarApp> {
-
+  
   List<String> searchresults = [
       'Alsace',
       'Aquitaine',
