@@ -11,7 +11,8 @@ class RegionPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title,
-        style: const TextStyle(color: Colors.white, 
+        style: const TextStyle(color: Colors.white,
+        fontSize: 20, 
         ),
         ),
       ),
